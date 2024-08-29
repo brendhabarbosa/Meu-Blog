@@ -1,19 +1,17 @@
 {%extends 'Blog/base.html'%}
+{% load static %}
 {%block main%}
-<div class="row">
-    <div class="col-md-8">
-        <div class="featured-post">
-            <h2>Post em Destaque</h2>
-            <p><strong>Título do Post:</strong> Este é um exemplo de um post em destaque. Adicione informações importantes ou artigos de destaque aqui.</p>
-            <p><a href="#" class="btn btn-primary">Leia mais</a></p>
-        </div>
-        
-    </div>
-    <div class="col-md-4">
-        <div class="sidebar">
-            <h3>Sobre Mim</h3>
-            <p>Breve descrição sobre o autor do blog. Pode incluir uma foto e um pequeno texto sobre a experiência ou o objetivo do blog.</p>
-        </div>
-    </div>
-</div>
+<main class="container mx-auto px-6 py-12 flex">
+    <section class="mb-8">
+        <h1 class="text-3xl font-bold mb-4">Bem-vindo ao Meu Blog!</h1>
+        <p class="text-lg text-gray-700">
+            Aqui você encontrará artigos sobre diversos temas que me interessam. Desde dicas de programação até reflexões pessoais,
+            espero que você encontre algo que ressoe com você.
+        </p>
+    </section>
+    <section class="mb-8">
+        <img src="{%static 'img/minhafoto.jpeg'%}" alt="Imagem Destacada" class="w-full h-auto rounded-lg shadow-md">
+    </section>
+
+</main>
 {%endblock%}
