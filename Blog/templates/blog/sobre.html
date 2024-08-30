@@ -1,0 +1,41 @@
+{%extends 'Blog/base.html'%}
+
+{%block main%}
+{% load static %}
+<main class="bg-red-100">
+<div class="w-screen   px-6 py-12 flex items-center justify-center m-0 min-h-screen">
+    <section class="w-screen mb-8 flex flex-col gap-4">
+        <div class="p-4 w-full">
+            <h2>Lista de Cursos</h2>
+            <ul>
+                {% for curso in cursos %}
+                <li class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h3><span class="font-bold">{{curso.nome}}</span></h3>
+                        <p>Plataforma: <span class="font-bold">{{curso.plataforma}}</span></p>
+                        <p>Instituição: <span class="font-bold">{{curso.instituição}}</span></p>
+                    </div>
+                    <img src="{{curso.imagem.url}}" alt="{{curso.nome}}" width="200">
+                </li>
+                {%endfor%} 
+            </ul>
+        </div>
+        
+        <div class="p-4 w-full">
+            <h2>Habilidades</h2>
+            <ul>
+                {% for habilidade in habilidades %}
+                <li class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h3><span class="font-bold">{{habilidade.nome}}</span></h3>
+                        <p>Descrição: <span class="font-bold">{{habilidade.descrição}}</span></p>
+                    </div>
+                    <img src="{{habilidade.imagem.url}}" alt="{{habilidade.nome}}" width="200">
+                </li>
+                {%endfor%} 
+            </ul>
+        </div>
+    </section>
+</div>
+</main>
+{%endblock%}

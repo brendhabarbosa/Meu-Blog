@@ -1,7 +1,9 @@
 {%extends 'Blog/base.html'%}
-{% load static %}
+
 {%block main%}
-<main class="container mx-auto px-6 py-12 flex">
+{% load static %}
+<main class="bg-red-100">
+<div class=" container mx-100  px-6 py-12 flex items-center justify-center m-0 min-h-screen">
     <section class="mb-8">
         <h1 class="text-3xl font-bold mb-4">Bem-vindo ao Meu Blog!</h1>
         <p class="text-lg text-gray-700">
@@ -10,8 +12,8 @@
         </p>
     </section>
     <section class="mb-8">
-        <img src="{%static 'img/minhafoto.jpeg'%}" alt="Imagem Destacada" class="w-full h-auto rounded-lg shadow-md">
+        <img src="{%static 'img/minhafoto.jpeg'%}" alt="Imagem Destacada"  class="w-64 h-64 rounded-full object-cover">
     </section>
-
+</div>
 </main>
 {%endblock%}
